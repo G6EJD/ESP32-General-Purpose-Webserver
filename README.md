@@ -16,7 +16,7 @@ A general purpose webserver with examples of how to:
 11. Read and display data from a DHT11 or DHT22 temperature and humdity sensor
 12. Add general web pages, modify the supplied latin for your own text
 
-Copy the server source code and sensors files toy your sketch folder
+Copy the server source code and sensors files to your sketch folder
 
 Change the SSID and Password for your Router/network.
 
