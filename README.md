@@ -23,11 +23,19 @@ Change the SSID and Password for your Router/network
 Add pages as required, for example to include BME280 support change change the first lines to look like this:
 
 //#define bme680sensor
+
 #define bme280sensor
+
 //#define shtsensor
+
 //#define dhtsensor
+
 //#define relay
+
 //#define led
+
 //#define graph
+
 #define inputexample
+
  
