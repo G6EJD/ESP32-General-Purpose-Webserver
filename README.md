@@ -1,5 +1,5 @@
-# ESP32-General-Purpose-Webserver
-An ESP32 based webserver with lots of examples in it
+# ESP32/ESP8266-General-Purpose-Webserver
+An ESP32/ESP8266 based webserver with lots of examples in it
 
 A general purpose webserver with examples of how to:
 
