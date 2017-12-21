@@ -30,3 +30,4 @@ Add pages as required, for example to include BME280 support change change the f
 //#define led
 //#define graph
 #define inputexample
+ 
