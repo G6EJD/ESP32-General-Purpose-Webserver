@@ -29,6 +29,7 @@
   // BME280 Support using I2C
   #include <Adafruit_Sensor.h>
   #include "Adafruit_BME280.h"
+  #define SEALEVELPRESSURE_HPA (1013.25)
   Adafruit_BME280 bme280; // I2C
 #endif
 
