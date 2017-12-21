@@ -40,8 +40,8 @@
 WiFiUDP ntpUDP; //** NTP client class
 NTPClient timeClient(ntpUDP);
 //################ VARIABLES ################
-const char* ssid      = "SKYAE43F";    // WiFi SSID
-const char* password  = "QDMSWSFMQL";  // WiFi Password
+const char* ssid      = "yourSSID";      // WiFi SSID
+const char* password  = "yourPASSWORD";  // WiFi Password
 
 String siteheading    = "ESP8266 Webserver";               // Site's Main Title
 String subheading     = "Sensor Readings";               // Sub-heading for all pages
