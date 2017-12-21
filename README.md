@@ -20,7 +20,7 @@ Copy the server source code and sensors files to your sketch folder
 
 Change the SSID and Password for your Router/network
 
-Add pages as required, for example to include BME280 support change change the first lines to look like this:
+Add pages as required by adding or removing '//' comments, for example to include BME280 support change change the first lines to look like this:
 
 //#define bme680sensor
 
