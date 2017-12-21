@@ -17,36 +17,52 @@
 #include <Wire.h>
 #include <SPI.h>
 
-// BME680 Support using I2C
-#include <Adafruit_Sensor.h>
-#include "Adafruit_BME680.h"
-#define SEALEVELPRESSURE_HPA (1013.25)
-Adafruit_BME680 bme680; // I2C
+#ifdef bme680sensor
+  // BME680 Support using I2C
+  #include <Adafruit_Sensor.h>
+  #include "Adafruit_BME680.h"
+  #define SEALEVELPRESSURE_HPA (1013.25)
+  Adafruit_BME680 bme680; // I2C
+#endif
 
-// BME280 Support using I2C
-#include <Adafruit_Sensor.h>
-#include "Adafruit_BME280.h"
-Adafruit_BME280 bme280; // I2C
+#ifdef bme280sensor
+  // BME280 Support using I2C
+  #include <Adafruit_Sensor.h>
+  #include "Adafruit_BME280.h"
+  Adafruit_BME280 bme280; // I2C
+#endif
 
-// SHT31 Support using I2C
-#include "Adafruit_SHT31.h"
+#ifdef shtsensor
+  // SHT31 Support using I2C
+  #include "Adafruit_SHT31.h"
+  #define sht31_address 0x44 // I2C address of SHT31 sensor
+  Adafruit_SHT31 sht31 = Adafruit_SHT31();
+#endif
 
-Adafruit_SHT31 sht31 = Adafruit_SHT31();
+#ifdef dhtsensor
+  #include "DHT.h"
+  #define DHTPIN 2 
+  //#define DHTTYPE DHT11   // DHT 11 
+  //#define DHTTYPE DHT21   // DHT 21 (AM2301) 
+  #define DHTTYPE DHT22   // DHT 22  (AM2302), AM2321 
+  DHT dht(DHTPIN, DHTTYPE);
+#endif
 
-// DHT 11/22/21 Support using wire bus
-#include "DHT.h" 
-#define  DHTPIN 2     // what digital pin the DHT sensor is connected to
-//#define DHTTYPE DHT11   // DHT 11 
-//#define DHTTYPE DHT21   // DHT 21 (AM2301) 
-#define DHTTYPE DHT22   // DHT 22  (AM2302), AM2321 
-DHT dht(DHTPIN, DHTTYPE);
+#ifdef led
+  #define LED_BUILTIN 2    // Needed for ESP32 LOLIN Board
+  boolean LED = false;
+#endif
 
-// RELAY Controls
-#define Relay_pin 4
+#ifdef relay
+  // RELAY Controls
+  #define Relay_pin 4
+  boolean RELAY = false;
+#endif
 
-// Servo Control
-#define Servo_pin 13
-#define SERVO_MIN_PULSEWIDTH 1000 // Minimum pulse width in microsecond 
-#define SERVO_MAX_PULSEWIDTH 2000 // Maximum pulse width in microsecond 
-#define SERVO_MAX_DEGREE     180  // Maximum angle in degree upto which servo can rotate 
-
+#ifdef servo
+  // Servo Control
+  #define Servo_pin 13
+  #define SERVO_MIN_PULSEWIDTH 1000 // Minimum pulse width in microsecond 
+  #define SERVO_MAX_PULSEWIDTH 2000 // Maximum pulse width in microsecond 
+  #define SERVO_MAX_DEGREE     180  // Maximum angle in degree upto which servo can rotate 
+#endif
